@@ -1,0 +1,59 @@
+&__join-container {
+  padding-top: 0em;
+  margin-left: 70px;
+}
+&__join-title-container {
+  margin: 0 35.42% 0 12.07%;
+  @include respond(phone) {
+    margin: 3em auto -2em auto;
+  }
+}
+&__join-title {
+  @include font-source-header(
+    $size: 35px,
+    $color: #2e2c5f,
+    $weight: bold,
+    $lineHeight: 25px,
+    $letterSpace: 0.03em
+  );
+  font-family: Rubik Bold;
+  text-indent: 3px;
+  color: #2e2c5f;
+  mix-blend-mode: normal;
+  @include respond(tab-land) {
+    font-size: 1.85em;
+    text-indent: unset;
+    margin: 0 auto;
+  }
+  @include respond(phone) {
+    text-align: center;
+    padding-bottom: 2em;
+  }
+  @include respond(phone-narrow) {
+    width: 10em;
+    margin: auto;
+  }
+}
+&__join-description-container {
+  margin: 0 44.01% 0 12.33%;
+  max-height: 10em;
+  max-width: 31em;
+  word-wrap: break-word;
+
+  @include respond(phone) {
+    margin: 0 auto;
+    max-width: 20em;
+  }
+  @include respond(smallest) {
+    max-width: 18em;
+  }
+}
+&__join-description {
+  font-family: SofiaProSoftW01-Regular;
+  font-size: 18px;
+  line-height: 26px;
+  @include responsive-font(1.9vw, 14px, 18px);
+  letter-spacing: 0.01em;
+
+  color: #383636;
+}

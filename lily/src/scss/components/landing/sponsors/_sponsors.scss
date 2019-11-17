@@ -1,0 +1,20 @@
+.sponsors {
+  &__container {
+    @include flexBox();
+    @include flexColumn();
+    position: relative;
+    min-height: 296px;
+    margin-top: 2em;
+    @include respond(desktop) {
+      margin-top: 10em;
+    }
+
+    @include respond(tab-land) {
+      margin-top: -2em;
+    }
+    @media screen and (max-width: 394px) {
+      margin-top: -1em;
+    }
+  }
+  @import './container/container.scss';
+}

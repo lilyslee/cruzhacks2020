@@ -1,0 +1,24 @@
+&__description {
+  font-family: SofiaProSoftW01-Regular;
+  font-size: 20px;
+  line-height: 155%;
+  letter-spacing: 0.01em;
+  color: #383636;
+  overflow-wrap: break-word;
+
+  margin-top: 25px;
+  height: 150%;
+
+  @include respond(tab-land) {
+    font-size: 14px;
+  }
+}
+&__description-container {
+  max-width: 50vw;
+  @include respond(tab-port) {
+    max-width: 80vw;
+  }
+  @include respond(phone-narrow) {
+    margin: auto;
+  }
+}

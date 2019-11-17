@@ -1,0 +1,45 @@
+.about-backdrop {
+  &__container {
+    @include flexBox();
+    position: sticky;
+    min-height: 596px;
+
+    @include respond(tab-land) {
+      min-height: 696px;
+    }
+    @include respond(smallest) {
+      min-height: 596px;
+    }
+  }
+
+  /* SVGs */
+  &__laptop-image,
+  &__pillars-image {
+    position: absolute;
+  }
+
+  &__laptop-image {
+    top: 10%;
+    left: 0;
+    /*
+    width: 420px;
+    height: 446px;
+    */
+
+    width: 33em;
+    height: auto;
+    @include respond(big-desktop) {
+      width: 30em;
+    }
+    @include respond(desktop) {
+      max-width: 45%;
+    }
+    @include respond(tab-land) {
+      top: 2%;
+      max-width: 37%;
+    }
+    @include respond(phone) {
+      max-width: 55%;
+    }
+  }
+}

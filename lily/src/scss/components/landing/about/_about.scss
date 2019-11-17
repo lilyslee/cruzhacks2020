@@ -1,0 +1,80 @@
+.about {
+  &__container {
+    @include flexBox();
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: flex-start;
+    top: 90px;
+    min-height: 696px;
+
+    @include respond(mission) {
+      // top: 0;
+    }
+    @include respond(tab-land) {
+      align-items: center;
+      left: unset;
+      padding-left: 2%;
+      padding-right: 2%;
+    }
+    @include respond(tab-port) {
+      min-height: 596px;
+    }
+    @include respond(phone) {
+      min-height: 826px;
+    }
+    @include respond(phone-narrow) {
+      min-height: 756px;
+      padding-bottom: 4em;
+    }
+    @include respond(smallest) {
+      min-height: 656px;
+    }
+  }
+
+  @import './text/title';
+  @import './text/subtitle';
+  @import './text/description';
+
+  &__placeholder-text {
+    font-family: SofiaProSoftW01-Regular;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0.04em;
+    text-indent: 3px;
+
+    color: #cdcdcd;
+
+    transform: rotate(26.68deg);
+  }
+}
+
+.about-text__container {
+  position: absolute;
+  top: em;
+  right: 26vw;
+  padding-left: 3em;
+  max-width: 40em;
+  @include respond(desktop) {
+    right: 11vw;
+  }
+  @include respond(tab-land) {
+    top: 8em;
+  }
+  @include respond(tab-port) {
+    right: 8vw;
+    width: 25em;
+    top: 8em;
+  }
+  @include respond(phone) {
+    right: auto;
+    width: 25em;
+    top: 58vw;
+    padding: 0 2em 0 2em;
+  }
+  @include respond(phone-narrow) {
+    padding: 0 1em 0 1em;
+    top: 60vw;
+    max-width: 18em;
+  }
+}

@@ -1,0 +1,90 @@
+$text-color: #2e2c5f;
+
+@include respond(tab-land) {
+  &__card-container {
+    display: block;
+  }
+  &__card {
+    margin: 1em 0;
+  }
+}
+
+/* Welcome card containers */
+&__card-container {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  padding: 15em 2em 0 2em;
+  justify-content: center;
+  flex-wrap: wrap;
+  @include respond(tab-land) {
+    padding-top: 2em;
+  }
+  @include respond(tab-port) {
+    padding: 2em 2em 2em;
+  }
+  @include respond(phone) {
+    flex-direction: column;
+  }
+}
+
+&__card {
+  display: flex; 
+  margin: 15px;
+  justify-content: space-around; 
+  align-items: center;
+  border: 3px solid #83e2dc;
+  background: #ffffff;
+  box-sizing: border-box; 
+  border-radius: 25px;
+  max-width: 25vw;
+  height: 30em;
+  @include respond(tab-land) {
+    min-height: 45vh;
+    max-width: 25em;
+    margin: 2em 1em 1em 1em;
+  }
+  @include respond(tab-port) {
+    margin: 1.5em 0.75em 1.5em 0.75em;
+    max-width: 22em;
+    height: 24em;
+  }
+  @include respond(phone) {
+    max-height: 23em;
+    max-width: 17em;
+  }
+}
+/* Welcome card text related stuff */
+&__card-text {
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: -3em;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+&__card-header {
+  @include font-source-header(
+    $size: 1.45em,
+    $color: $text-color,
+    $weight: bold,
+    $lineHeight: 70px,
+    $letterSpace: 0.02em
+  );
+  font-family: Rubik Bold;
+  @include responsive-font(3.5vw, 1.3em, 1.60em);
+}
+&__card-caption {
+  color: #424242;
+  font-family: SofiaProSoftW01-Regular;
+  line-height: 1.5em;
+  letter-spacing: 0.01em;
+  margin-left: 0px;
+  max-width: 270px;
+  height: 60px;
+  @include responsive-font(2.5vw, 15px, 18px);
+}
+&__card-tree {
+  padding: 0.9vw;
+}

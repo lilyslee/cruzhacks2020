@@ -1,0 +1,45 @@
+@mixin button {
+  width: 220px;
+  height: 55px;
+  background-color: #23CFC3;
+  font-family: SofiaProSoftW01-Regular;
+  font-size: 17px;
+  line-height: 19px;
+  letter-spacing: 0.07em;
+  text-indent: 3px;
+  color: #fffefe;
+  text-align: center;
+  vertical-align: center;
+  border-radius: 29px;
+  box-shadow: 0 4px 8px rgba(35, 207, 195, 0.5);
+  text-decoration: none;
+  cursor: pointer;
+  &:hover {
+    background: #3B3BA9;
+    transition: background-color 0.5s ease;
+  }
+}
+&__button-container {
+  margin: 2% 44.01% 0 12.33%;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  align-items: center;
+  @include respond(phone) {
+    justify-content: center;
+    padding-top: 1.5em;
+    margin: unset;
+  }
+}
+&__button {
+  @include button();
+}
+&__button--mentor {
+  @include button();
+  margin: 0 1em 0 0;
+}
+&__button--volunteer {
+  @include button();
+  margin: 0 0 0 1em;
+}

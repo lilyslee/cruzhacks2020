@@ -1,0 +1,19 @@
+// Placeholder for FAQ section to keep everything in the correct position.
+.faq-backdrop__container {
+  background-color: #ffffff;
+  position: relative;
+  min-height: 474px;
+  z-index: -1;
+  /*
+    @include respond(tab-land) {
+        min-height: 786px;
+    }
+    */
+  @include respond(desktop) {
+    min-height: 870px;
+  }
+  @include respond(smallest) {
+    min-height: 586px;
+    padding-top: 2em;
+  }
+}

@@ -1,0 +1,33 @@
+.cta {
+  &__container {
+    position: relative;
+    min-height: 876px;
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    flex-flow: column;
+    @include respond(tab-port) {
+      min-height: 556px;
+      margin-top: -4em;
+    }
+    @include respond(tab-land) {
+      min-height: 796px;
+      margin-top: -8em;
+    }
+    @include respond(tab-port) {
+      margin-top: -10em;
+      min-height: 776px;
+    }
+    @include respond(phone) {
+      min-height: 796px;
+      margin-top: 28em;
+    }
+    @include respond(smallest) {
+      margin-top: 18em;
+      min-height: 816px;
+    }
+  }
+  @import './button/button';
+  @import './actions/join';
+  @import './actions/sponsor';
+}

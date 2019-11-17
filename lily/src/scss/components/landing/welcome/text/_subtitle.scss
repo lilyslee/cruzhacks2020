@@ -1,0 +1,25 @@
+&__subtitle {
+  @include font-source-subheader(
+    $size: 1.5em,
+    $color: #767676,
+    $lineHeight: 350px,
+    $letterSpace: 0.04em,
+    $textIndent: 8px
+  );
+  @include responsive-font(2.1vw, 1em, 1.3em);
+  margin-top: 10px;
+  height: 25px;
+  text-align: left;
+  position: static;
+  margin: auto;
+  @include respond(tab-land) {
+    letter-spacing: 0.04em;
+  }
+  @include respond(tab-port) {
+  }
+  @include respond(phone-narrow) {
+    margin: auto;
+    right: unset;
+    text-align: center;
+  }
+}

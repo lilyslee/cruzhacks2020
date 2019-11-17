@@ -1,0 +1,36 @@
+// ============================================================================
+// Global Styles
+// ============================================================================
+
+/* Mixins */
+@import './mixins';
+
+/* Fonts */
+@import './fonts';
+
+/* Landing Styles */
+@import './components/landing/landing';
+
+/* Team Styles */
+@import './components/team/team';
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overscroll-behavior: contain;
+}
+
+.app-root {
+  display: block;
+  max-width: 100%;
+}
+
+#mlh-trust-badge {
+  margin-top: -1px;
+  @include respond(phone-narrow) {
+    visibility: hidden;
+  }
+}

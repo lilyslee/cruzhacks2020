@@ -1,0 +1,29 @@
+.welcome {
+  &__container {
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    min-height: 756px;
+    padding-bottom: 8em;
+    @include respond(tab-land) {
+      height: unset;
+      min-height: 696px;
+    }
+    @include respond(tab-port) {
+      min-height: 796px;
+    }
+    @include respond(phone) {
+      padding-bottom: unset;
+      min-height: 1436px;
+    }
+  }
+  &__text-container {
+    margin: 0 auto;
+    width: fit-content;
+  }
+  @import './text/title';
+  @import './text/subtitle';
+  @import './cards/cards';
+}

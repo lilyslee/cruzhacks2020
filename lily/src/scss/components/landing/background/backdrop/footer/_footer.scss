@@ -1,0 +1,49 @@
+.footer-backdrop__container {
+  @include flexBox();
+  position: sticky;
+  margin-top: -91em;
+  @include respond(desktop) {
+  }
+  @include respond(mission) {
+    margin-top: -78em;
+  }
+  @include respond(tab-land) {
+    margin-top: -75em;
+  }
+  @include respond(tab-port) {
+    margin-top: -69em;
+  }
+  @include respond(phone) {
+    margin-top: -45em;
+  }
+  @include respond(smallest) {
+    margin-top: -28em;
+  }
+  @media screen and (max-width: 394px) {
+    margin-top: -25.85em;
+  }
+  @media screen and (max-width: 354px) {
+    margin-top: -23.85em;
+  }
+}
+
+/* SVGs */
+.footer-backdrop-extended__image,
+.footer-backdrop-trees__image {
+  position: static;
+}
+
+.footer-backdrop-extended__image {
+  object-fit: scale-down;
+}
+
+.background-footer-mobile__image {
+  position: absolute;
+  display: none;
+
+  height: auto;
+  width: 100%;
+
+  @media (max-width: 681px) {
+  }
+}

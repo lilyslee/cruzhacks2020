@@ -1,0 +1,67 @@
+.hero-backdrop {
+  &__container {
+    min-height: 100vh;
+    position: relative;
+  }
+
+  // SVGs
+  &__all-pillars-image {
+    position: absolute;
+
+    max-width: 30em;
+    height: 37em;
+
+    left: 0;
+    top: 125px;
+    @include respond(mission) {
+      max-width: 26em;
+    }
+    @include respond(tab-land) {
+      max-width: 28em;
+      height: auto;
+    }
+    @include respond(tab-port) {
+      top: 20vh;
+      max-width: 28em;
+      height: auto;
+    }
+    @include respond(phone-narrow) {
+      left: 3px;
+      top: 22vh;
+      max-width: 24em;
+      height: auto;
+    }
+  }
+
+  &__rightside-image {
+    position: absolute;
+    // width: 1002px;
+    // height: 741px;
+    top: -41px;
+    right: -30px;
+
+    max-height: 104vh;    
+    width: 80vw;
+
+    @include respond(tab-land) {
+      max-width: 63vw;
+    }
+    @include respond(tab-port) {
+      max-width: 50vw;
+    }
+    @include respond(phone) {
+      max-width: 50vw;
+      top: 5vh;
+    }
+  }
+
+  &__rightside-clip0,
+  &__rightside-clip1,
+  &__rightside-clip2,
+  &__rightside-clip3 {
+    @include respond(tab-land) {
+      transform: scaleX(0);
+    }
+  }
+}
+

@@ -1,0 +1,95 @@
+.welcome-backdrop {
+  &__container {
+    @include flexBox();
+    position: sticky;
+    min-height: 896px;
+    // custom media queries
+    @media (max-width: 75em) {
+      min-height: 686px;
+    }
+    @include respond(tab-port) {
+      min-height: 996px;
+    }
+    @media screen and (max-width: 1139px) {
+      min-height: 1196px;
+    }
+    @media screen and (max-width: 899px) {
+      min-height: 996px;
+    }
+    @media screen and (max-width: 782px) {
+      min-height: 1406px;
+    }
+    @include respond(phone) {
+      min-height: 1436px;
+      margin-top: -95em;
+      padding-bottom: 100em;
+    }
+    @include respond(phone-narrow) {
+      margin-top: -92em;
+      padding-bottom: 95em;
+    }
+    @include respond(smallest) {
+      margin-top: -92em;
+    }
+  }
+  /* SVGs */
+  &__mountain-image,
+  &__pillars-image {
+    align-self: center;
+    position: absolute;
+  }
+  &__mountain-image {
+    bottom: 100px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 2;
+    bottom: -525px;
+    @include respond(phone) {
+      display: none;
+    }
+    @include respond(mission) {
+      width: 120vw;
+    }
+    @include respond(tab-land) {
+      width: 160vw;
+      bottom: -250px;
+    }
+    @include respond(tab-port) {
+      bottom: -80px;
+      width: 200vw;
+    }
+  }
+  &__mountain-mobile-image {
+    position: absolute;
+    display: none;
+    top: 1750px;
+
+    @include respond(phone) {
+      display: unset;
+      object-fit: fill;
+    }
+    @include respond(smallest) {
+      top: 1735px;
+    }
+  }
+  &__pillars-image {
+    z-index: -1;
+    max-width: 78%;
+    height: auto;
+    top: 8%;
+    position: absolute;
+    @include respond(tab-land) {
+      top: -18%;
+    }
+    @include respond(tab-port) {
+    }
+    @include respond(phone) {
+      top: 1575px;
+      max-width: 100%;
+    }
+    @include respond(smallest) {
+      top: 1525px;
+    }
+  }
+}

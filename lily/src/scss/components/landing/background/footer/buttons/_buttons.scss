@@ -1,0 +1,64 @@
+.footer-button-container {
+  position: relative;
+  padding: 0 3.5em;
+  @include respond(mission) {
+    padding: 0 0 0 1em;
+  }
+}
+
+/* Left Social Media Buttons */
+.footer-social__buttons {
+  position: absolute;
+  bottom: 0;
+  width: 50%;
+  float: left;
+
+  @include respond(phone){
+    float: unset;
+    position: relative;
+    width: 100%;
+    padding: 0 5em;
+  }
+
+  @include respond(phone-narrow) {
+    padding-left: 1.3em;
+  }
+
+}
+
+.footer-social__button {
+  display: inline-block;
+  margin-right: 15px;
+}
+
+/* Footer up button */
+
+.footer-up__button {
+  // display: none;
+  width: 50%;
+  text-align: right;
+  float: right;
+  @include respond(desktop) {
+    padding-right: 0.5em;
+  }
+
+  @include respond(mission) {
+    padding-right: 1em;
+  }
+
+  @include respond(phone) {
+    margin: 5.5em 0 2.5em 0;
+    text-align: center;
+    float: unset;
+    width: 100%;
+  }
+
+  @include respond(smallest) {
+    padding-right: 0em;
+  }
+}
+
+.footer-up__image {
+  // display: none;
+  cursor: pointer;
+}
